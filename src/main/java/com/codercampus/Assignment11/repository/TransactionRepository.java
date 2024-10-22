@@ -36,7 +36,7 @@ public class TransactionRepository {
 	 * or https://docs.oracle.com/javase/tutorial/essential/io/objectstreams.html
 	 * 
 	 * The use case is easier to understand if you think about it as taking the contents of your java program
-	 *  and writing it out to a file, and or going from that file back into the a java program.
+	 *  and writing it out to a file, and or going from that file back into a java program.
 	 */
 	@SuppressWarnings("unchecked")
 	public void populateData() {

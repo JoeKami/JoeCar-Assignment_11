@@ -1,4 +1,4 @@
-<html xmlns:th="http://thymeleaf.org">
+<html xmlns:th="http://thymeleaf.org" lang="">
 	<head>
 		<title>Online Bank</title>
 		<link rel="stylesheet" href="/css/transactions.css"/>
@@ -19,7 +19,6 @@
 			     it dynamically list ALL 100 transactions from the Repo -->
 			<tr th:each="transaction : ${transactions}">
 				<td><a href="@{/transactions/{id}(id=${transaction.id})}" th:text="${transaction.id}"></a></td>
-				<td th:text="${transaction.id}"></td>
 				<td th:text="${transaction.date}"></td>
 				<td th:text="${transaction.description}"></td>
 				<td th:text="${transaction.amount}"></td>
