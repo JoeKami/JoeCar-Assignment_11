@@ -24,11 +24,7 @@ public class TransactionService {
                 .collect(Collectors.toList());
     }
 
-    public Optional<Transaction> getTransactionById(Long id) throws IndexOutOfBoundsException{
-        if (id < 0 || id > 100) {
-            throw new IndexOutOfBoundsException("The Id you entered: " + id + " is out of bounds.");
-        }
-
+    public Optional<Transaction> getTransactionById(Long id) throws IndexOutOfBoundsException {
         return transactionRepository.findAll()
                 .stream().
                 filter(transaction -> Objects.equals(transaction.getId(), id))

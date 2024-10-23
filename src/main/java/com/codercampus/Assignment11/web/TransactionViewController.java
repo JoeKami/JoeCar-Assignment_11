@@ -27,14 +27,14 @@ public class TransactionViewController {
         return "transactions";
     }
 
-    @GetMapping("/{transactionId}")
-    public String getTransactionById(@PathVariable("transactionId") Long transactionId, ModelMap model) {
-        Optional<Transaction> transaction = transactionService.getTransactionById(transactionId);
+    @GetMapping("/{id}")
+    public String getTransactionById(@PathVariable("id") Long id, ModelMap model) {
+        Optional<Transaction> transaction = transactionService.getTransactionById(id);
         if (transaction.isPresent()) {
             model.addAttribute("transaction", transaction.get());
-            return "transaction" + transactionId;
         } else {
-            return "transactionNotFound";
+            model.addAttribute("error", "Transaction not found!");
         }
+        return "transactions";
     }
 }
