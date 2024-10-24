@@ -25,7 +25,7 @@
 		</table>
 
 		<div th:if="${transaction != null}">
-			<p style="font-size:45px; font-weight: bold;"><strong>Transaction ID:</strong> <span th:text="${transaction.id + ' (' + transaction.type + ')'}" style="font-size:45px; font-weight: bold;"></span></p>
+			<p style="font-size:45px; font-weight: bold;"><strong>Transaction ID:</strong> <span th:text="${transaction.id + ' (' + transaction.type + ')'}"></span></p>
 			<p>Date: <span th:text="${transaction.date}"></span></p>
 			<p>Amount: <span th:text="${transaction.amount}"></span></p>
 			<p>Description: <span th:text="${transaction.description}"></span></p>
