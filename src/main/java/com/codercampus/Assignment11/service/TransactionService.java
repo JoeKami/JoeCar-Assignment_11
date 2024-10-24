@@ -24,10 +24,10 @@ public class TransactionService {
                 .collect(Collectors.toList());
     }
 
-    public Optional<Transaction> getTransactionById(Long id) throws IndexOutOfBoundsException {
+    public Optional<Transaction> getTransactionById(Long id) {
         return transactionRepository.findAll()
-                .stream().
-                filter(transaction -> Objects.equals(transaction.getId(), id))
+                .stream()
+                .filter(transaction -> Objects.equals(transaction.getId(), id))
                 .findFirst();
     }
 }
